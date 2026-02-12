@@ -1,6 +1,6 @@
 {
-  "name": "ticket-sniper",
-  "productName": "ticket-sniper",
+  "name": "ticket-armamenter",
+  "productName": "ticket-armamenter",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
