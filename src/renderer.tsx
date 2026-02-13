@@ -1,9 +1,6 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-
-const App = () => {
-  return <h1>Hello World</h1>;
-};
+import App from "./pages/app";
 
 const container = document.getElementById("root");
 // biome-ignore lint/style/noNonNullAssertion: <!-- Ignore because we are sure that the container element exists -->
