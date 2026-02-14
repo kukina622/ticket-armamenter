@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:is(.dark *));
 
 @layer utilities {
   .text-balance {
@@ -62,9 +63,11 @@
     --success: 142 71% 45%;
     --success-foreground: 0 0% 2%;
   }
+
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
