@@ -1,4 +1,6 @@
 import type { TicketPlatform } from '@/types/platform'
+import type { PlatformAdapter } from '@/types/platform-form/adapter'
+import { tixcraftAdapter } from './tixcraft/adapter'
 
 export const platforms: TicketPlatform[] = [
   {
@@ -12,3 +14,7 @@ export const platforms: TicketPlatform[] = [
     color: '199 89% 48%',
   },
 ]
+
+export const platformAdapterMapping: Record<string, PlatformAdapter<any>> = {
+  tixcraft: tixcraftAdapter,
+}

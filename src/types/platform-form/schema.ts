@@ -16,5 +16,5 @@ export type SectionDef<T> = {
   key: string
   title: string
   icon?: React.ReactNode
-  fields: FieldDef<T>[]
+  fields: Array<FieldDef<T> | FieldDef<T>[]>
 }
