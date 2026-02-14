@@ -1,20 +1,10 @@
 import { Activity } from "lucide-react";
+import { useNavigate } from "react-router";
 import { PlatformCard } from "@/components/platform/platform-card";
-import type { TicketPlatform } from "@/types/platform";
+import { platforms } from "@/core/platforms";
 
 export default function Dashboard() {
-  const platforms: TicketPlatform[] = [
-    {
-      id: "tixcraft",
-      name: "tixCraft",
-      url: "https://tixcraft.com",
-      description: "演唱會、音樂節、舞台劇等大型活動售票平台",
-      category: "綜合售票",
-      features: ["演唱會", "音樂節", "舞台劇", "體育賽事"],
-      logo: "T",
-      color: "199 89% 48%"
-    }
-  ];
+  const navigate = useNavigate();
   return (
     <div className="p-6">
       <div className="mb-4">
@@ -33,7 +23,9 @@ export default function Dashboard() {
           <PlatformCard
             platform={platform}
             taskCount={Math.floor(Math.random() * 10)}
-            onSelect={() => console.log(`Selected platform: ${platform.name}`)}
+            onSelect={() => {
+              navigate(`/platform/${platform.id}`);
+            }}
             key={platform.id}
           />
         ))}

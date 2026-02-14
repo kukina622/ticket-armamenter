@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import RootLayout from "./components/root-layout";
 import App from "./pages/app";
 import Dashboard from "./pages/dashboard";
+import Platform from "./pages/platform";
 
 const container = document.getElementById("root");
 // biome-ignore lint/style/noNonNullAssertion: <!-- Ignore because we are sure that the container element exists -->
@@ -14,6 +15,7 @@ root.render(
       <Route element={<App />}>
         <Route element={<RootLayout />}>
           <Route index path="/" element={<Dashboard />} />
+          <Route path="/platform/:platformId" element={<Platform />} />
         </Route>
       </Route>
     </Routes>
