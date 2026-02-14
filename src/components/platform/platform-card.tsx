@@ -18,7 +18,7 @@ export function PlatformCard({
     <button
       type="button"
       onClick={onSelect}
-      className="group relative flex flex-col rounded-lg border bg-card p-4 text-left transition-all hover:border-primary/40 hover:bg-card/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="group relative flex flex-col rounded-lg border bg-card p-4 text-left cursor-pointer transition-all hover:border-primary/40 hover:bg-card/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
