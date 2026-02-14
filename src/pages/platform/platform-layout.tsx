@@ -19,7 +19,7 @@ export default function PlatformLayout() {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full overflow-y-auto">
       {/* Header */}
       <div className="border-b px-6 py-4">
         <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ export default function PlatformLayout() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-auto p-6">
+      <div className="flex-1 p-6">
         <Tabs className="w-full" defaultValue="new-task">
           <TabsList className="bg-secondary mb-6">
             <TabsTrigger
